@@ -10,7 +10,8 @@ libraries needed:
 8.django-crispy-forms
 9.django-allauth
 10.django-allauth
+11.mysqlclient
 
 
 cli: pip install django-allauth Pillow django-environ django-payments django-crispy-forms dj
-ango-countries django-storages django-rest-framework
+ango-countries django-storages django-rest-framework mysqlclient
