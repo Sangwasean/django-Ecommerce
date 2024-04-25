@@ -22,6 +22,10 @@
             width: 80%;
             margin: 0 auto;
         }
+        .logo {
+        width: 10%;
+        height: auto;
+        }
 
         nav {
             float: right;
