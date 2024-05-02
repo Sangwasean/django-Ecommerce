@@ -53,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
+    'ecommerce.middleware.AuthMiddleware',
+
 ]
 ROOT_URLCONF = 'ecommerce.urls'
 
@@ -89,6 +91,9 @@ DATABASES = {
     }
 }
 
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Password validation

@@ -1,18 +1,20 @@
-# myproject/urls.py
-
 from django.contrib import admin
 from django.urls import path, include
-from myapp import views
+
+from myapp.views.checkout import CheckOut
+from myapp.views.orders import Order
+from myapp.views.login import Login
+from myapp.views.register import Register
+from myapp.views.home import Home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('myapp.urls')),
     path('accounts/', include('accounts.urls')),
-    path('login/', views.login_view, name='login'),
-    path('register/', views.register_view, name='register'),
-    path('home/', views.home_view, name='home'),
-    path('cart/', views.cart_view, name='cart'),
-    path('checkout/', views.checkout_view, name='checkout'),
-    path('orders/', views.orders_view, name='orders'),
+    path('login/', Login, name='login'),
+    path('register/', Register, name='register'),
+    path('home/', Home, name='home'),
+    path('checkout/',CheckOut, name='checkout'),
+    path('orders/', Order, name='orders'),
 
 ]

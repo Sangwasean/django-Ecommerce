@@ -1,13 +1,13 @@
 from django.db import models
-from .product import Products
-from .customer import Customer
+from .products import Products
+from .user import User
 import datetime
 
 
 class Order(models.Model):
     product = models.ForeignKey(Products,
                                 on_delete=models.CASCADE)
-    customer = models.ForeignKey(Customer,
+    customer = models.ForeignKey(User,
                                  on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
     price = models.IntegerField()
