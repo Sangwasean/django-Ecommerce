@@ -5,6 +5,9 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 
+from myapp.forms import RegistrationForm
+
+
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -28,6 +31,8 @@ def register_view(request):
     else:
         form = UserCreationForm()
     return render(request, 'register.html', {'form': form})
+
+
 
 def home_view(request):
     return render(request, 'home.html')

@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,14 +34,16 @@
             <p>Already have an account? <a href="{% url 'login' %}">Sign in here</a></p>
              <div class="social-login">
                 <p>Or continue with:</p>
-                <button class="social-btn google-btn">
-                    <i class="fab fa-google"></i> Continue with Google
+                <button class="social-btn">
+                    <img src="{% static 'images/google.png' %}" alt=google class="google">
+                    Continue with Google
                 </button>
-                <button class="social-btn apple-btn">
-                    <i class="fab fa-apple"></i> Continue with Apple
+                <button class="social-btn">
+                    <img src="{% static 'images/apple.png' %}" alt=apple class="apple">
+                     Continue with Apple
                 </button>
-                <button class="social-btn facebook-btn">
-                    <i class="fab fa-facebook-f"></i> Continue with Facebook
+                <button class="social-btn">
+                   Continue with Facebook
                 </button>
             </div>
         </div>
